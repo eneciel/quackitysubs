@@ -101,6 +101,10 @@ span {
 }
 
 #langs ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
 }
 
