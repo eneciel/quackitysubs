@@ -138,7 +138,7 @@ span {
     background-color: black;
     border: white 2px solid;
     width: 10vw;
-    height: 34vh;
+    height: 12vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,18 +238,18 @@ span {
 }
 
 .faqrow {
-    width: 40vw;
+    width: 48vw;
     display: flex;
     margin: 4vh auto;
     border-top: 2px solid black;
 }
 
 .question {
-    width: 16vw;
+    width: 20vw;
 }
 
 .answer {
-    width: 24vw;
+    width: 28vw;
 }
 
 button {
