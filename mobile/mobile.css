@@ -216,8 +216,8 @@ span {
 }
 
 .profile-content > p > img {
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
 }
 
 .profile:nth-child(1) {
