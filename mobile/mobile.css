@@ -33,7 +33,7 @@ ul {
 li {
     background-color: black;
     border-radius: 999px;
-    padding: 1.2vh 2vw;
+    padding: 2vh 4vw;
     margin: 0 1vw;
 }
 
@@ -43,7 +43,7 @@ a {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 8em;
     font-weight: 900;
     padding: 8vh 2vw 4vh;
     margin: 0;
@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 4em;
     font-weight: 700;
     padding: 2vh 0 0;
     margin: 0;
@@ -59,7 +59,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 4em;
     font-weight: 900;
     padding: 2vh 0;
     margin: 0;
@@ -67,7 +67,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.25em;
+    font-size: 3em;
     font-weight: 600;
     padding: 0;
     margin: 0;
@@ -76,7 +76,7 @@ h4 {
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 3em;
     font-weight: 400;
     padding: 1vh 0;
     margin: 0;
@@ -159,7 +159,7 @@ span {
 }
 
 .clicked {
-    height: 32vh;
+    height: 24vh;
     justify-content: start;
     animation-duration: 300ms;
     animation-name: move;
@@ -188,7 +188,7 @@ span {
 .profile-content {
     width: 48vw;
     display: flex;
-    padding: 0.6em 4vw;
+    padding: 1em 4vw;
     justify-content: space-between;
 }
 
@@ -269,7 +269,7 @@ button {
     border: none;
     border-radius: 1vh;
     background-color: black;
-    padding: 4vw 0;
+    padding: 2vw 0;
     margin: 0.4vh 0;
 }
 
@@ -277,7 +277,7 @@ button {
 
 #float {
     position: fixed;
-    top: 12vh;
+    top: 8vh;
     left: 4vw;
 }
 
@@ -295,8 +295,8 @@ button {
 }
 
 #float img {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
 }
 
 /* FOOTER */
@@ -312,5 +312,5 @@ button {
 
 #footer a {
     color: #2c2c2c;
-    font-size: 0.8em;
+    font-size: 1.25em;
 }
