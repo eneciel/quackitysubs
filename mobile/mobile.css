@@ -43,7 +43,7 @@ a {
 }
 
 h1 {
-    font-size: 2.4em;
+    font-size: 3em;
     font-weight: 900;
     padding: 8vh 2vw 4vh;
     margin: 0;
@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25em;
+    font-size: 2em;
     font-weight: 700;
     padding: 2vh 0 0;
     margin: 0;
@@ -59,7 +59,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.25em;
+    font-size: 2em;
     font-weight: 900;
     padding: 2vh 0;
     margin: 0;
@@ -67,7 +67,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 600;
     padding: 0;
     margin: 0;
@@ -76,7 +76,7 @@ h4 {
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 400;
     padding: 1vh 0;
     margin: 0;
@@ -159,7 +159,7 @@ span {
 }
 
 .clicked {
-    height: 36vh;
+    height: 32vh;
     justify-content: start;
     animation-duration: 300ms;
     animation-name: move;
@@ -171,9 +171,9 @@ span {
 }
 
 .profile-header img {
-    width: 24px;
-    height: 24px;
-    margin-right: 1vw;
+    width: 36px;
+    height: 36px;
+    margin-right: 2vw;
 }
 
 .profile-contentsbox {
@@ -267,9 +267,9 @@ span {
 button {
     width: 56vw;
     border: none;
-    border-radius: 12px;
+    border-radius: 1vh;
     background-color: black;
-    padding: 0.4vh 0;
+    padding: 4vw 0;
     margin: 1vh 0;
 }
 
@@ -292,6 +292,11 @@ button {
     align-items: center;
     margin: 2vh 0;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+#float img {
+    width: 1vh;
+    height: 1vh;
 }
 
 /* FOOTER */
