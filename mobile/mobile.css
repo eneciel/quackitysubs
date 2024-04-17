@@ -290,7 +290,7 @@ button {
 /* FLOAT MENU */
 
 #float {
-    position: sticky;
+    position: fixed;
     top: 12vh;
     left: 3vw;
 }
