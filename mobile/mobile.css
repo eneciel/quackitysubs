@@ -209,6 +209,12 @@ span {
 
 .profile-content div p {
     font-weight: 200;
+    display: flex;
+}
+
+.profile-content p > img {
+    width: 1.25em;
+    height: 1.25em;
 }
 
 .profile:nth-child(1) {
