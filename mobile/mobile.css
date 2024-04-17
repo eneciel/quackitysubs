@@ -154,7 +154,7 @@ span {
     border: white 2px solid;
     border-radius: 2vh;
     width: 58vw;
-    height: 8vh;
+    height: 56px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,7 +164,7 @@ span {
 }
 
 .clicked {
-    height: 36vh;
+    height: 120px;
     justify-content: start;
     animation-duration: 300ms;
     animation-name: move;
@@ -191,9 +191,9 @@ span {
 }
 
 .profile-content {
-    width: 50vw;
+    width: 54vw;
     display: flex;
-    padding: 1em 4vw;
+    padding: 1em 2vw;
     justify-content: space-between;
 }
 
