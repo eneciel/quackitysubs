@@ -109,7 +109,7 @@ span {
 }
 
 #langs ul:nth-child(2) {
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 
 /* ABOUT SECTION */
@@ -287,7 +287,7 @@ button {
 
 #float {
     position: fixed;
-    top: 16vh;
+    top: 18vh;
     left: 4vw;
 }
 
