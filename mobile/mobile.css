@@ -154,7 +154,7 @@ span {
     border: white 2px solid;
     border-radius: 2vh;
     width: 58vw;
-    height: 56px;
+    height: 36vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,7 +164,7 @@ span {
 }
 
 .clicked {
-    height: 120px;
+    height: 100vw;
     justify-content: start;
     animation-duration: 300ms;
     animation-name: move;
