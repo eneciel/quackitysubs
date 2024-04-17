@@ -107,10 +107,6 @@ span {
     margin: 0 auto;
 }
 
-#langs ul:nth-child(2) {
-    margin-top: 1vh;
-}
-
 /* ABOUT SECTION */
 
 #about {
@@ -294,8 +290,8 @@ button {
 /* FLOAT MENU */
 
 #float {
-    position: fixed;
-    top: 18vh;
+    position: sticky;
+    top: 12vh;
     left: 3vw;
 }
 
