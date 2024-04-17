@@ -157,7 +157,7 @@ span {
     background-color: black;
     border: white 2px solid;
     border-radius: 2vh;
-    width: 56vw;
+    width: 58vw;
     height: 8vh;
     display: flex;
     flex-direction: column;
@@ -195,7 +195,7 @@ span {
 }
 
 .profile-content {
-    width: 48vw;
+    width: 50vw;
     display: flex;
     padding: 1em 4vw;
     justify-content: space-between;
@@ -296,7 +296,7 @@ button {
 #float {
     position: fixed;
     top: 18vh;
-    left: 4vw;
+    left: 3vw;
 }
 
 #float ul {
