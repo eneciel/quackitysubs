@@ -211,7 +211,11 @@ span {
     font-weight: 200;
 }
 
-.profile-content p > img {
+.profile-content > p {
+    display: flex;
+}
+
+.profile-content > p > img {
     width: 3em;
     height: 3em;
 }
