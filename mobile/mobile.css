@@ -31,6 +31,7 @@ ul {
 }
 
 li {
+    font-size: 3em;
     background-color: black;
     border-radius: 999px;
     padding: 2vh 4vw;
@@ -43,7 +44,7 @@ a {
 }
 
 h1 {
-    font-size: 8em;
+    font-size: 6em;
     font-weight: 900;
     padding: 8vh 2vw 4vh;
     margin: 0;
@@ -159,7 +160,7 @@ span {
 }
 
 .clicked {
-    height: 24vh;
+    height: 36vh;
     justify-content: start;
     animation-duration: 300ms;
     animation-name: move;
@@ -312,5 +313,5 @@ button {
 
 #footer a {
     color: #2c2c2c;
-    font-size: 1.25em;
+    font-size: 2em;
 }
