@@ -223,7 +223,7 @@ span {
 }
 
 .profile:nth-child(2) {
-    background: url(../source/isa.bg.png);
+    background: url(../source/isa.bg.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
