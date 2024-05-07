@@ -230,6 +230,73 @@ span {
     background-position: center;
 }
 
+/* TIMEZONE SECTION */
+
+#timezone {
+    width: 56vw;
+    margin: 4vh;
+}
+
+#timezone h2 {
+    padding: 0 2vw 2vh;
+}
+
+.timezonebox {
+    border-top: black 2px solid;
+    padding: 8vh 0 0;
+    margin: 4vh 0 0;
+}
+
+.row {
+    width: 56vw;
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    width: 48vw;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+#timezone table {
+    margin: 1vh 0;
+}
+
+.standard, .icons {
+    height: 2vw;
+}
+
+.nums {
+    height: 2vh;
+    color: #616161;
+    font-size: 0.8em;
+}
+
+#timezone td, #timezone th {
+    width: 2vw;
+    margin: 0 4px;
+}
+
+.standard td div, .icons td div:first-child {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nums td div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timezone td img {
+    margin: auto;
+}
+
 /* FAQ SECTION */
 
 #faq {

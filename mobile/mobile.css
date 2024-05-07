@@ -257,6 +257,62 @@ span {
     background-position: center;
 }
 
+/* TIMEZONE SECTION */
+
+#timezone {
+    width: 64vw;
+    margin: 4vh 0;
+}
+
+.timezonebox {
+    width: 64vw;
+    border-top: black 2px solid;
+    display: flex;
+    justify-content: center;
+    padding: 8vh 0 0;
+    margin: 4vh 0 0;
+}
+
+.line {
+    width: 2px;
+    height: inherit;
+    background-color: black;
+    margin: 0 1vh;
+}
+
+#timezone td, #timezone th {
+    height: 3vh;
+}
+
+table div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td:nth-child(1) {
+    width: 8vh;
+}
+
+td:nth-child(2) {
+    color: #616161;
+    font-size: 0.8em;
+    padding: 0 1vh;
+}
+
+tr:nth-child(1) td:nth-child(3) {
+    background-color: black;
+}
+
+.standard div {
+    height: 5vh;
+}
+
+.icons, .icons div {
+    width: 5vh;
+    height: 5vh;
+}
+
 /* FAQ SECTION */
 
 #faq {
