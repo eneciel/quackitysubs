@@ -116,7 +116,7 @@ span {
 /* ADMINS SECTION */
 
 #admins {
-    width: 56vw;
+    width: 64vw;
     margin: 4vh 0;
 }
 
@@ -230,6 +230,20 @@ span {
     background-position: center;
 }
 
+.profile:nth-child(7) {
+    background: url(../source/monie.bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .profile:nth-child(6):hover {
+    background: url(../source/moon.bg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+
 /* TIMEZONE SECTION */
 
 #timezone {
@@ -243,11 +257,35 @@ span {
 
 .timezonebox {
     border-top: black 2px solid;
-    padding: 8vh 0 0;
+    padding: 2vh 0 0;
     margin: 4vh 0 0;
 }
 
-.row {
+.timezonebox img {
+    width: 100%;
+}
+
+.timezonebox p {
+    color: #616161;
+}
+
+/* DST */
+
+.timezonebox p {
+    display: block;
+}
+
+.timezonebox img:nth-child(2) {
+    display: none;
+}
+
+.timezonebox img:nth-child(3) {
+    display: block;
+}
+
+/* FORMER TIMEZONE TABLE STYLE - NOT USED */
+
+/* .row {
     width: 56vw;
     display: flex;
     justify-content: center;
@@ -295,7 +333,7 @@ span {
 
 #timezone td img {
     margin: auto;
-}
+} */
 
 /* FAQ SECTION */
 
@@ -336,8 +374,8 @@ button h3 {
 
 #float {
     position: fixed;
-    top: 16vh;
-    left: 6vw;
+    top: 12vh;
+    left: 1em;
 }
 
 #float ul {

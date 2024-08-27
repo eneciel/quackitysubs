@@ -116,7 +116,7 @@ span {
 
 #about div {
     width: 56vw;
-    border-left: 2px solid black;
+    border-left: 4px solid black;
     padding: 0 4vw 2vh;
     margin: 0 auto;
 }
@@ -159,12 +159,12 @@ span {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 4vw;
+    padding: 1em 4vw;
     transition: 300ms;
 }
 
 .clicked {
-    height: 84vw;
+    height: 1000px;
     justify-content: start;
     animation-duration: 300ms;
     animation-name: move;
@@ -176,9 +176,14 @@ span {
 }
 
 .profile-header img {
-    width: 36px;
-    height: 36px;
+    width: 4em;
+    height: 4em;
     margin-right: 2vw;
+    user-select: none;
+}
+
+.profile-header h3 {
+    user-select: none;
 }
 
 .profile-contentsbox {
@@ -195,6 +200,7 @@ span {
     display: flex;
     padding: 1em 2vw;
     justify-content: space-between;
+    user-select: none;
 }
 
 .profile-content div {
@@ -210,9 +216,13 @@ span {
     display: flex;
 }
 
-.profile-content > p > img {
+.profile-content img {
     width: 1em;
     height: 1em;
+}
+
+#bday {
+    font-size: 2.5em;
 }
 
 .profile:nth-child(1) {
@@ -257,6 +267,20 @@ span {
     background-position: center;
 }
 
+.profile:nth-child(7) {
+    background: url(../source/monie.bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .profile:nth-child(6):hover {
+    background: url(../source/moon.bg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+
 /* TIMEZONE SECTION */
 
 #timezone {
@@ -266,14 +290,39 @@ span {
 
 .timezonebox {
     width: 64vw;
-    border-top: black 2px solid;
-    display: flex;
+    border-top: black 4px solid;
+    display: block;
     justify-content: center;
-    padding: 8vh 0 0;
+    padding: 2vh 0 0;
     margin: 4vh 0 0;
 }
 
-.line {
+.timezonebox img {
+    width: 100%;
+}
+
+.timezonebox p {
+    font-size: 2em;
+    color: #616161;
+}
+
+/* DST */
+
+.timezonebox p {
+    display: block;
+}
+
+.timezonebox img:nth-child(2) {
+    display: none;
+}
+
+.timezonebox img:nth-child(3) {
+    display: block;
+}
+
+/* FORMER TIMEZONE TABLE STYLE - NOT USED */
+
+/* .line {
     width: 2px;
     height: inherit;
     background-color: black;
@@ -311,7 +360,7 @@ tr:nth-child(1) td:nth-child(3) {
 .icons, .icons div {
     width: 5vh;
     height: 5vh;
-}
+} */
 
 /* FAQ SECTION */
 
@@ -323,7 +372,7 @@ tr:nth-child(1) td:nth-child(3) {
 .faqrow {
     width: 56vw;
     margin: 4vh 4vw;
-    border-top: 2px solid black;
+    border-top: 4px solid black;
 }
 
 .question {
