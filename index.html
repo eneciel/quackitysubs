@@ -50,6 +50,7 @@
                     isa_lang_h401: "Spanish",
                     isa_lang_h402: "English",
                     isa_lang_p03: "French",
+                    eneciel: "Eneciel",
                     en_country_p: "Country",
                     en_country_h401: "Korea",
                     en_age_p: "Age",
@@ -180,6 +181,7 @@
                     isa_lang_h401: "Español",
                     isa_lang_h402: "Inglés",
                     isa_lang_p03: "Francés",
+                    eneciel: "Eneciel",
                     en_country_p: "País",
                     en_country_h401: "Corea",
                     en_age_p: "Edad",
@@ -310,6 +312,7 @@
                     isa_lang_h401: "Espanhol",
                     isa_lang_h402: "Inglês",
                     isa_lang_p03: "Francês",
+                    eneciel: "Eneciel",
                     en_country_p: "País",
                     en_country_h401: "Coréia",
                     en_age_p: "Idade",
@@ -408,7 +411,7 @@
                     about_h2_02: "Gardez en tête que",
                     about_p_02_1: "Nous sommes 7 admins, mais ",
                     about_p_02_span: "seulement 4 dirigent les traductions en direct",
-                    about_p_02_2: ", seulement 4 dirigent les traductions en direct",
+                    about_p_02_2: ", seulement 4 dirigent les traductions en direct.",
                     about_h2_03: "Nous ne sommes PAS un compte officiel",
                     about_p_03_span: "Nous ne sommes pas directement affiliés à Quackity Studios.",
                     about_p_03_1: "L'un de nos admins fait partie de l'équipe de traduction officielle, mais c'est une chose séparée.",
@@ -440,6 +443,7 @@
                     isa_lang_h401: "Espagnol",
                     isa_lang_h402: "Anglais",
                     isa_lang_p03: "Français",
+                    eneciel: "Eneciel",
                     en_country_p: "Pays",
                     en_country_h401: "Corée",
                     en_age_p: "Age",
@@ -570,6 +574,7 @@
                     isa_lang_h401: "스페인어",
                     isa_lang_h402: "영어",
                     isa_lang_p03: "프랑스어",
+                    eneciel: "엔에씨엘",
                     en_country_p: "국가",
                     en_country_h401: "대한민국",
                     en_age_p: "나이",
@@ -654,21 +659,26 @@
                     faq_02a_p04: "다만 다시보기 영상은 상당히 길다는 점을 기억해주세요. 여러 사람들이 특정 다시보기에 관심을 보내주신다면 최선을 다해보겠습니다!",
                     faq_03q_h2: "기타+",
                     faq_03q_p01: "번역 요청을 포함해 질문이 있으시다면 언제든 저희가 올린 트윗에 편하게 멘션 달아주시거나, 디엠 혹은 익명 질문함으로 보내주세요!",
-                    faq_03q_p02: "간혹 실시간으로 최대한 빨리 번역하기 위해, 혹은 영상에 공간이 부족한 탓에 몇가지 정보가 누락되거나, 문화 차이로 인해 이해하기 어려운 것들이 있을 수 있습니다. 저희는 도움을 드리는 일을 즐거워하는 사람들이니, 필요하시다면 기꺼히 설명해 드리겠습니다!"
+                    faq_03q_p02: "간혹 실시간으로 최대한 빨리 번역하기 위해 혹은 영상에 공간이 부족한 탓에 몇가지 정보가 누락되거나, 문화 차이로 인해 이해하기 어려운 것들이 있을 수 있습니다. 저희는 도움을 드리는 일을 즐거워하는 사람들이니, 필요하시다면 기꺼히 설명해 드리겠습니다!"
                 },
             }
         </script>
 
         <main>
             <div id="langs">
-                <label for="languageSelector"><img src="source/language.svg"></label>
-                <select id="languageSelector">
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                    <option value="ptbr">Português</option>
-                    <option value="fr">Français</option>
-                    <option value="ko">한국어</option>
-                </select>
+                <div>
+                    <h4>Quackity Subs</h4>
+                </div>
+                <div>
+                    <label for="languageSelector"><img src="source/language.svg"></label>
+                    <select id="languageSelector">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="ptbr">Português</option>
+                        <option value="fr">Français</option>
+                        <option value="ko">한국어</option>
+                    </select>
+                </div>
             </div>
             <div id="about">
                 <img src="source/logo.png">
@@ -679,7 +689,7 @@
                 </div>
                 <div id="infos">
                     <h2 id="about_h2_01"></h2>
-                    <div class="row-p"><p id="about_p_01_1"></p> <span id="about_p_01_span"></span></div>
+                    <div class="row-p"><p id="about_p_01_1"></p> <span id="about_p_01_span"></span> <p id="about_p_01_2"></p></div>
                     <h2 id="about_h2_02"></h2>
                     <div class="row-p"><p id="about_p_02_1"></p> <span id="about_p_02_span"></span> <p id="about_p_02_2"></p></div>
                     <h2 id="about_h2_03"></h2>
@@ -760,29 +770,34 @@
                         </div>
                     </div>
                     <div class="profile">
-                        <div class="profile-header"><img src="source/eneciel.icon.svg"><h3>Eneciel</h3></div>
+                        <div class="profile-header"><img src="source/eneciel.icon.svg"><h3 id="eneciel"></h3></div>
                         <div class="profile-contentsbox">
                             <div class="profile-content">
                                 <p id="en_country_p"></p>
                                 <div class="row-h4"><img src="source/flag/flag-south-korea.svg" style="padding: 0 4px;"><h4 id="en_country_h401"></h4></div>
                             </div>
                             <div class="profile-content">
-                                <p>Age</p>
+                                <p id="en_age_p"></p>
                                 <div>
-                                    <h4>18</h4>
-                                    <p><img src="source/balloon.png" style="width: 1em;">23rd Aug. 2006</p>
+                                    <h4 id="en_age_h401"></h4>
+                                    <i><img src="source/balloon.png" style="width: 1em;"><i id="en_age_p02"></i></i>
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <p>Pronouns</p>
-                                <h4>They/Them</h4>
+                                <p id="en_pronoun_p"></p>
+                                <div class="column">
+                                    <h4 id="en_pronoun_h401"></h4>
+                                    <p id="en_pronoun_p02"></p>
+                                </div>
                             </div>
                             <div class="profile-content">
-                                <p>Languages</p>
+                                <p id="en_lang_p"></p>
                                 <div>
-                                    <h4>Korean</h4>
-                                    <h4>English</h4>
-                                    <p style="text-align: end;">Spanish</p>
+                                    <h4 id="en_lang_h401"></h4>
+                                    <h4 id="en_lang_h402"></h4>
+                                    <p id="en_lang_p03" style="text-align: end;"></p>
+                                    <!-- <p id="en_lang_p04" style="text-align: end;"></p> -->
+                                    <p id="en_lang_p05" style="text-align: end;"></p>
                                 </div>
                             </div>
                             <a href="https://twitter.com/NaCl_HQ" target="_blank"><div class="profile-content">
@@ -795,26 +810,29 @@
                         <div class="profile-header"><img src="source/dev.icon.svg"><h3>Dev</h3></div>
                         <div class="profile-contentsbox">
                             <div class="profile-content">
-                                <p>Country</p>
-                                <h4><img src="source/flag/flag-mexico.svg" style="padding: 0 4px;">Mexico</h4>
-                            </div>
-                            <div class="profile-content">
-                                <p>Age</p>
-                                <div>
-                                    <h4>23</h4>
-                                    <p><img src="source/balloon.png" style="width: 1em;">13th Jul. 2001</p>
+                                <p id="dev_country_p"></p>
+                                <div class="row-h4">
+                                    <img src="source/flag/flag-mexico.svg" style="padding: 0 4px;">
+                                    <h4 id="dev_country_h401"></h4>
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <p>Pronouns</p>
-                                <h4>She/Her</h4>
+                                <p id="dev_age_p"></p>
+                                <div>
+                                    <h4 id="dev_age_h401"></h4>
+                                    <i><img src="source/balloon.png" style="width: 1em;"><i id="dev_age_p02"></i></i>
+                                </div>
                             </div>
                             <div class="profile-content">
-                                <p>Languages</p>
+                                <p id="dev_pronoun_p"></p>
+                                <h4 id="dev_pronoun_h401"></h4>
+                            </div>
+                            <div class="profile-content">
+                                <p id="dev_lang_p"></p>
                                 <div>
-                                    <h4>Spanish</h4>
-                                    <h4>English</h4>
-                                    <p style="text-align: end;">Portuguese</p>
+                                    <h4 id="dev_lang_h401"></h4>
+                                    <h4 id="dev_lang_h402"></h4>
+                                    <p id="dev_lang_p03" style="text-align: end;"></p>
                                 </div>
                             </div>
                             <a href="https://twitter.com/devanywashere" target="_blank"><div class="profile-content">
@@ -827,26 +845,29 @@
                         <div class="profile-header"><img src="source/tessa.icon.svg"><h3>Troian</h3></div>
                         <div class="profile-contentsbox">
                             <div class="profile-content">
-                                <p>Country</p>
-                                <h4><img src="source/flag/flag-brazil.svg" style="padding: 0 4px;">Brazil</h4>
-                            </div>
-                            <div class="profile-content">
-                                <p>Age</p>
-                                <div>
-                                    <h4>24</h4>
-                                    <p><img src="source/balloon.png" style="width: 1em;">15th Jun. 2000</p>
+                                <p id="tessa_country_p"></p>
+                                <div class="row-h4">
+                                    <img src="source/flag/flag-brazil.svg" style="padding: 0 4px;">
+                                    <h4 id="tessa_country_h401"></h4>
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <p>Pronouns</p>
-                                <h4>She/Her</h4>
+                                <p id="tessa_age_p"></p>
+                                <div>
+                                    <h4 id="tessa_age_h401"></h4>
+                                    <i><img src="source/balloon.png" style="width: 1em;"><i id="tessa_age_p02"></i></i>
+                                </div>
                             </div>
                             <div class="profile-content">
-                                <p>Languages</p>
+                                <p id="tessa_pronoun_p"></p>
+                                <h4 id="tessa_pronoun_h401"></h4>
+                            </div>
+                            <div class="profile-content">
+                                <p id="tessa_lang_p"></p>
                                 <div>
-                                    <h4>Portuguese</h4>
-                                    <h4>English</h4>
-                                    <p style="text-align: end;">Spanish</p>
+                                    <h4 id="tessa_lang_h401"></h4>
+                                    <h4 id="tessa_lang_h402"></h4>
+                                    <p id="tessa_lang_p03" style="text-align: end;"></p>
                                 </div>
                             </div>
                             <a href="https://twitter.com/hyunequackity" target="_blank"><div class="profile-content">
@@ -859,25 +880,28 @@
                         <div class="profile-header"><img src="source/moon.icon.svg"><h3>Moon</h3></div>
                         <div class="profile-contentsbox">
                             <div class="profile-content">
-                                <p>Country</p>
-                                <h4><img src="source/flag/flag-france.svg" style="padding: 0 4px;">France</h4>
-                            </div>
-                            <div class="profile-content">
-                                <p>Age</p>
-                                <div>
-                                    <h4>22</h4>
-                                    <p><img src="source/balloon.png" style="width: 1em;">25th Aug. 2002</p>
+                                <p id="mj_country_p"></p>
+                                <div class="row-h4">
+                                    <img src="source/flag/flag-france.svg" style="padding: 0 4px;">
+                                    <h4 id="mj_country_h401"></h4>
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <p>Pronouns</p>
-                                <h4>They/Them</h4>
+                                <p id="mj_age_p"></p>
+                                <div>
+                                    <h4 id="mj_age_h401"></h4>
+                                    <i><img src="source/balloon.png" style="width: 1em;"><i id="mj_age_p02"></i></i>
+                                </div>
                             </div>
                             <div class="profile-content">
-                                <p>Languages</p>
+                                <p id="mj_pronoun_p"></p>
+                                <h4 id="mj_pronoun_h401"></h4>
+                            </div>
+                            <div class="profile-content">
+                                <p id="mj_lang_p"></p>
                                 <div>
-                                    <h4>French</h4>
-                                    <h4>English</h4>
+                                    <h4 id="mj_lang_h401"></h4>
+                                    <h4 id="mj_lang_h402"></h4>
                                 </div>
                             </div>
                             <a href="https://twitter.com/thelivingmoon_" target="_blank"><div class="profile-content">
@@ -890,26 +914,29 @@
                         <div class="profile-header"><img src="source/monie.icon.svg"><h3>Monie</h3></div>
                         <div class="profile-contentsbox">
                             <div class="profile-content">
-                                <p>Country</p>
-                                <h4><img src="source/flag/flag-portugal.svg" style="padding: 0 4px;">Portugal</h4>
-                            </div>
-                            <div class="profile-content">
-                                <p>Age</p>
-                                <div>
-                                    <h4>18</h4>
-                                    <p><img src="source/balloon.png" style="width: 1em;">20th Jul. 2006</p>
+                                <p id="monie_country_p"></p>
+                                <div class="row-h4">
+                                    <img src="source/flag/flag-portugal.svg" style="padding: 0 4px;">
+                                    <h4 id="monie_country_h401"></h4>
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <p>Pronouns</p>
-                                <h4>She/Her</h4>
+                                <p id="monie_age_p"></p>
+                                <div>
+                                    <h4 id="monie_age_h401"></h4>
+                                    <i><img src="source/balloon.png" style="width: 1em;"><i id="monie_age_p02"></i></i>
+                                </div>
                             </div>
                             <div class="profile-content">
-                                <p>Languages</p>
+                                <p id="monie_pronoun_p"></p>
+                                <h4 id="monie_pronoun_h401"></h4>
+                            </div>
+                            <div class="profile-content">
+                                <p id="monie_lang_p"></p>
                                 <div>
-                                    <h4>Portuguese</h4>
-                                    <h4>English</h4>
-                                    <p style="text-align: end;">Spanish</p>
+                                    <h4 id="monie_lang_h401"></h4>
+                                    <h4 id="monie_lang_h402"></h4>
+                                    <p id="monie_lang_p03" style="text-align: end;"></p>
                                 </div>
                             </div>
                             <a href="https://twitter.com/hyunequackity" target="_blank"><div class="profile-content">
@@ -921,10 +948,10 @@
                 </div>
             </div>
             <div id="timezone">
-                <h1>Timezones</h1>
-                <h2>We are together all around the world!</h2>
+                <h1 id="timezone_h1"></h1>
+                <h2 id="timezone_h2"></h2>
                 <div class="timezonebox">
-                    <p>-> Daylight saving time</p>
+                    <p id="timezone_dst"></p>
                     <img src="source/timezonetable.png">
                     <img src="source/timezonetable-summer.png">
                     <img src="source/timezonetable_mobile.png">
@@ -932,38 +959,42 @@
                 </div>
             </div>
             <div id="faq">
-                <h1>FAQ</h1>
+                <h1 id="faq_h1"></h1>
                 <div class="faqrow">
                     <div class="question">
-                        <h2>Q1.</h2>
-                        <p>Are you looking for new admins?</p>
+                        <h2 id="faq_01q_h2"></h2>
+                        <p id="faq_01q_p"></p>
                     </div>
                     <div class="answer">
-                        <h2>A1.</h2>
-                        <p>Not actively, but we do have <span>an admin form open!</span> We check it every week to see if someone who might be a good fit applied.</p>
-                        <p>We're mostly interested (but not limited to): admins up to live translate (English-Spanish), German-speaking admins.</p>
-                        <button><a href="https://t.co/NPI063Er3x" target="_blank"><h3>APPLY</h3></a></button>
-                        <button><a href="https://t.co/m1ba1eG78g" target="_blank"><h3 style="padding-bottom: 0;">APPLY</h3><p style="padding-top: 0;">for live translator</p></a></button>
+                        <h2 id="faq_01a_h2"></h2>
+                        <div class="row-p">
+                            <p id="faq_01a_p01"></p> <span id="faq_01a_span"></span> <p id="faq_01a_p02"></p>
+                        </div>
+                        <p id="faq_01a_p03"></p>
+                        <button><a href="https://t.co/NPI063Er3x" target="_blank"><h3 id="faq_apply1"></h3></a></button>
+                        <button id="hide"><a href="https://t.co/m1ba1eG78g" target="_blank"><h3 id="faq_apply2" style="padding-bottom: 0;"></h3><p id="faq_apply2p" style="padding-top: 0;"></p></a></button>
                     </div>
                 </div>
                 <div class="faqrow">
                     <div class="question">
-                        <h2>Q2.</h2>
-                        <p>Can you translate [this] video/clip/VOD/etc?</p>
+                        <h2 id="faq_02q_h2"></h2>
+                        <p id="faq_02q_p"></p>
                     </div>
                     <div class="answer">
-                        <h2>A2.</h2>
-                        <p>You can always send a <span>DM</span> or a <span>CuriousCat</span> asking for a translation. We will gladly translate any clip or short video you need. You can even ask us to translate a specific space!</p>
-                        <p>However, keep in mind VODs are very long, but if people are interested in a certain VOD, we could try and work on it!</p>
+                        <h2 id="faq_02a_h2"></h2>
+                        <div class="row-p">
+                            <p id="faq_02a_p01"></p> <span id="faq_02a_span1"></span> <p id="faq_02a_p02"></p> <span id="faq_02a_span2"></span> <p id="faq_02a_p03"></p>
+                        </div>
+                        <p id="faq_02a_p04"></p>
                     </div>
                 </div>
                 <div class="faqrow">
-                    <div class="question"><h2>Also+</h2></div>
+                    <div class="question"><h2 id="faq_03q_h2"></h2></div>
                     <div class="answer">
                         <h2>1.</h2>
-                        <p>Don't hesitate to reply to our tweets, send us a DM, or send us a CuriousCat if you ever have any questions regarding a translation!</p>
+                        <p id="faq_03q_p01"></p>
                         <h2>2.</h2>
-                        <p>Due to trying to post a live translation as soon as possible or due to lack of space (in videos' subtitles), sometimes we might skip some kind of information or there might be a cultural barrier making it difficult to understand something. We'll gladly explain anything you need to, we are always happy to help!</p>
+                        <p id="faq_03q_p02"></p>
                     </div>
                 </div>
             </div>
@@ -983,24 +1014,37 @@
         </main>
 
         <script>
-            /* 초기 언어는 한국어(ko)로 설정하고, 변경되면 맞춰서 업데이트 하는 리스너 구현 */
-            window.addEventListener("load", function() {
-                document.getElementById("languageSelector").value = "ko";
-                updateLanguage("ko");
+            koreanObj = document.getElementById("korean");
 
+            /* 초기 언어는 영어(en)로 설정하고, 변경되면 맞춰서 업데이트 하는 리스너 구현 */
+            window.addEventListener("load", function() {
+                // 페이지가 로드되면 기본 언어 설정
+                document.getElementById("languageSelector").value = "en";
+                updateLanguage("en");
+
+                // 언어 선택이 변경될 때마다 호출되는 이벤트 리스너
                 document.getElementById("languageSelector").addEventListener("change", function() {
                     const selectedLang = this.value;
                     updateLanguage(selectedLang);
                 });
             });
-            
-            /* 딕셔너리 내 모든 key 값을 순회하며 변경하는 함수 */
+
             function updateLanguage(lang) {
+                // #hide 요소를 선택
+                const hideElement = document.getElementById("hide");
+
                 for (let key in langResource[lang]) {
                     const element = document.getElementById(key);
                     if (element) {
                         element.textContent = langResource[lang][key];
                     }
+                }
+                
+                // 언어에 따라 display 속성 설정
+                if (lang === "en" || lang === "es") {
+                    hideElement.style.display = "block";
+                } else {
+                    hideElement.style.display = "none";
                 }
             }
             

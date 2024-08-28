@@ -18,10 +18,21 @@ h2 {
     padding: 4em 1em 0;
 }
 
+.row-h1 {
+    display: block;
+    margin: 1.5em 0 16px;
+}
+
+.row-h1 h1 {
+    margin: 0;
+}
+
 /* LANGS */
 
 #langs {
     height: 56px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     padding: 0 1em;
 }
 
@@ -36,7 +47,7 @@ label img {
 
 /* ABOUT */
 
-#about div {
+#about #infos {
     width: 100%;
     box-sizing: border-box;
     padding: 0 1em;
@@ -62,11 +73,12 @@ label img {
 
 .profile:hover {
     width: 96%;
-    height: 24em;
+    height: 26em;
     justify-content: start;
 }
 
 .profile-contentsbox {
+    width: 70%;
     display: none;
 }
 
@@ -82,12 +94,16 @@ label img {
 
 .clicked {
     width: 96%;
-    height: 24em;
+    height: 26em;
     justify-content: start;
 }
 
 .clicked .profile-contentsbox {
     display: block;
+}
+
+.row-h4 {
+    padding: 4px 0;
 }
 
 /* TIMEZONE */
@@ -98,6 +114,10 @@ label img {
 
 #timezone p {
     text-indent: 0;
+}
+
+#timezone img {
+    margin-top: 2em;
 }
 
 /* DST MOBILE */
@@ -147,8 +167,10 @@ button {
 
 #float  {
     width: 100%;
+    height: auto;
     top: unset;
     left: unset;
+    align-items: end;
     bottom: 0;
     padding: 0;
     margin: 0;
@@ -156,7 +178,6 @@ button {
 
 #float ul {
     width: 100%;
-    background-color: tan;
     height: 56px;
     display: flex;
     justify-content: space-between;

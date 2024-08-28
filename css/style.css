@@ -43,13 +43,14 @@ a {
 h1 {
     font-size: 3em;
     font-weight: 900;
+    text-indent: 4px;
     margin: 1.5em 0 16px;
 }
 
 h2 {
     font-size: 1.5em;
     font-weight: 700;
-    text-indent: 1em;
+    text-indent: 8px;
     margin: 12px 0 8px;
 }
 
@@ -68,6 +69,7 @@ h4 {
 }
 
 p {
+    color: #1e1e1e;
     font-size: 1em;
     font-weight: 400;
     margin: 4px 0;
@@ -75,6 +77,10 @@ p {
 
 span {
     background-color: #FBFF4F;
+}
+
+#hide {
+    display: none;
 }
 
 /* ROWSETS */
@@ -85,7 +91,7 @@ span {
 }
 
 .row-h1 h1 {
-    margin-right: 12px;
+    margin-right: 4px;
 }
 
 .row-h4 {
@@ -117,14 +123,17 @@ span {
 #langs {
     width: 100%;
     color: black;
-    background-color: white;
     padding: 1em 4em;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     position: fixed;
+}
+
+#langs div {
+    display: flex;
+    align-items: center;
 }
 
 select {
@@ -132,7 +141,7 @@ select {
     border: none;
     border-radius: 4px;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 2px 4px;
+    padding: 6px;
 }
 
 label img {
@@ -168,6 +177,7 @@ label img {
 }
 
 #admins p {
+    color: white;
     margin: 0;
 }
 
@@ -427,14 +437,17 @@ button h3 {
 }
 
 button p {
+    color: white;
     margin: 0;
 }
 
 /* FLOAT MENU */
 
 #float {
+    height: 100vh;
+    display: flex;
+    align-items: center;
     position: fixed;
-    top: 4em;
     left: 1em;
 }
 
