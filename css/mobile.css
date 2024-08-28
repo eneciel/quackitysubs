@@ -59,6 +59,14 @@ label img {
 
 /* ADMINS */
 
+#admins_h2 {
+    display: none;
+}
+
+#admins_h2_mo {
+    display: block;
+}
+
 .profilebox {
     display: flex;
     flex-direction: column;

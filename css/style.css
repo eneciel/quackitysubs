@@ -187,6 +187,10 @@ label img {
     font-size: 0.9em;
 }
 
+#admins_h2_mo {
+    display: none;
+}
+
 .profilebox {
     display: flex;
     justify-content: center;
