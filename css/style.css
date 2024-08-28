@@ -43,22 +43,20 @@ a {
 h1 {
     font-size: 3em;
     font-weight: 900;
-    padding: 12vh 2vw 4vh;
-    margin: 0;
+    margin: 1.5em 0 16px;
 }
 
 h2 {
     font-size: 1.5em;
     font-weight: 700;
-    padding: 2vh 0 0;
-    margin: 0;
+    text-indent: 1em;
+    margin: 12px 0 8px;
 }
 
 h3 {
     font-size: 1.5em;
     font-weight: 900;
-    padding: 2vh 0;
-    margin: 0;
+    margin: 0.5em 0;
 }
 
 h4 {
@@ -72,12 +70,46 @@ h4 {
 p {
     font-size: 1em;
     font-weight: 400;
-    padding: 1vh 0;
-    margin: 0;
+    margin: 4px 0;
 }
 
 span {
     background-color: #FBFF4F;
+}
+
+/* ROWSETS */
+
+.row-h1 {
+    display: flex;
+    padding-left: 1em;
+}
+
+.row-h1 h1 {
+    margin-right: 12px;
+}
+
+.row-h4 {
+    height: 1em;
+    display: inline-flex;
+    align-items: center;
+}
+
+.row-h4 h4 {
+    display: inline;
+}
+
+.row-h4 img {
+    width: 1em;
+    height: 1em;
+    display: block;
+}
+
+.row-p {
+    display: inline;
+}
+
+.row-p p {
+    display: inline;
 }
 
 /* LANGUAGE SECTION*/
@@ -86,46 +118,63 @@ span {
     width: 100%;
     color: black;
     background-color: white;
-    padding: 2vh 0;
+    padding: 1em 4em;
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
     position: fixed;
+}
+
+select {
+    font-size: 0.8em;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 2px 4px;
+}
+
+label img {
+    width: 1.2em;
+    padding: 0 6px;
 }
 
 /* ABOUT SECTION */
 
 #about {
-    width: 56vw;
-    margin: 10vh 0 0;
+    width: 64vw;
+    padding: 4em 0 0;
 }
 
-#about div {
-    width: 40vw;
+#about #infos {
+    width: 48vw;
     border-left: 2px solid black;
-    padding: 0 1vw 2vh;
+    padding: 4px 2em 16px;
     margin: 0 auto;
 }
 
 #about img {
-    width: 8vw;
+    width: 10em;
     border-radius: 20px;
-    margin: 12vh 4vw 0;
+    margin: 100px 4em 0;
 }
 
 /* ADMINS SECTION */
 
 #admins {
     width: 64vw;
-    margin: 4vh 0;
-}
-
-#admins h2 {
-    padding: 0 2vw 2vh;
+    padding: 4em 0 0;
 }
 
 #admins p {
-    padding: 0;
+    margin: 0;
+}
+
+#admins i {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 0.9em;
 }
 
 .profilebox {
@@ -137,8 +186,8 @@ span {
     color: white;
     background-color: black;
     border: white 2px solid;
-    width: 10vw;
-    height: 48vh;
+    width: 9vw;
+    height: 26em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,13 +203,13 @@ span {
 }
 
 .profile-header {
+    padding: 8px 0;
     display: flex;
     align-items: center;
 }
 
 .profile-header img {
-    width: 24px;
-    height: 24px;
+    width: 1.5em;
     margin-right: 1vw;
 }
 
@@ -173,15 +222,22 @@ span {
 }
 
 .profile-content {
-    width: 12vw;
+    width: 240px;
     display: flex;
-    padding: 0.6em 4vw;
+    padding: 8px 2em;
     justify-content: space-between;
 }
 
-.profile-content div {
+.profile a .profile-content {
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.profile-content .column {
     display: flex;
     flex-direction: column;
+    align-items: end;
 }
 
 .profile-content div p {
@@ -247,12 +303,8 @@ span {
 /* TIMEZONE SECTION */
 
 #timezone {
-    width: 56vw;
-    margin: 4vh;
-}
-
-#timezone h2 {
-    padding: 0 2vw 2vh;
+    width: 64vw;
+    padding: 4em 0 0;
 }
 
 .timezonebox {
@@ -266,7 +318,8 @@ span {
 }
 
 .timezonebox p {
-    color: #616161;
+    color: #727272;
+    text-indent: 2em;
 }
 
 /* DST */
@@ -275,7 +328,7 @@ span {
     display: block;
 }
 
-.timezonebox img:nth-child(2) {
+.timezonebox img {
     display: none;
 }
 
@@ -338,43 +391,50 @@ span {
 /* FAQ SECTION */
 
 #faq {
-    width: 56vw;
-    margin: 4vh 0;
+    width: 64vw;
+    padding: 4em 0 0;
 }
 
 .faqrow {
-    width: 48vw;
+    width: 52vw;
     display: flex;
     margin: 4vh auto;
     border-top: 2px solid black;
 }
 
 .question {
-    width: 20vw;
+    width: 240px;
+    padding: 0 1em;
 }
 
 .answer {
-    width: 28vw;
+    width: 40vw;
+    padding: 0 1em;
 }
 
 button {
-    width: 20vw;
+    width: 328px;
+    height: 4em;
     border: none;
-    border-radius: 2vh;
+    border-radius: 12px;
     background-color: black;
-    padding: 0.2vh 0;
-    margin: 1vh 0;
+    margin: 4px 0;
 }
 
 button h3 {
     font-size: 1.25em;
+    margin: 4px 0 0;
+}
+
+button p {
+    margin: 0;
 }
 
 /* FLOAT MENU */
 
 #float {
     position: fixed;
-    top: 12vh;
+    top: 4em;
     left: 1em;
 }
 

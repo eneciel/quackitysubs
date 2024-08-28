@@ -1,0 +1,179 @@
+/* COMMON */
+
+h1 {
+    font-size: 2em;
+    text-indent: 0;
+    margin: 24px 12px 4px;
+}
+
+h2 {
+    font-size: 1.2em;
+    text-indent: 0;
+    margin: 12px 0 4px;
+}
+
+#about, #admins, #timezone, #faq {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4em 1em 0;
+}
+
+/* LANGS */
+
+#langs {
+    height: 56px;
+    padding: 0 1em;
+}
+
+select {
+    font-size: 1em;
+}
+
+label img {
+    width: 24px;
+    padding: 0 4px;
+}
+
+/* ABOUT */
+
+#about div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1em;
+}
+
+#about img {
+    margin: 6em 0 1em;
+}
+
+/* ADMINS */
+
+.profilebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    width: 96%;
+    height: 4em;
+    border-radius: 1em;
+}
+
+.profile:hover {
+    width: 96%;
+    height: 24em;
+    justify-content: start;
+}
+
+.profile-contentsbox {
+    display: none;
+}
+
+.profile:hover .profile-content {
+    display: flex;
+}
+
+.profile-content {
+    width: 100%; 
+    display: flex;
+    padding: 6px 0;
+}
+
+.clicked {
+    width: 96%;
+    height: 24em;
+    justify-content: start;
+}
+
+.clicked .profile-contentsbox {
+    display: block;
+}
+
+/* TIMEZONE */
+
+.timezonebox {
+    margin: 1em 0 0;
+}
+
+#timezone p {
+    text-indent: 0;
+}
+
+/* DST MOBILE */
+
+.timezonebox img:nth-child(3) {
+    display: none;
+}
+
+.timezonebox img:nth-child(5) {
+    display: block;
+}
+
+/* FAQ */
+
+.faqrow {
+    width: 96%;
+    margin: 1em 0 0;
+    flex-direction: column;
+}
+
+.question, .answer {
+    width: 90%;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    padding: 0;
+}
+
+/* FOOTER */
+
+#footer {
+    width: 100%;
+    height: 240px;
+    margin: 4em 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer a {
+    font-size: 0.8em;
+}
+
+/* FLOAT */
+
+#float  {
+    width: 100%;
+    top: unset;
+    left: unset;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#float ul {
+    width: 100%;
+    background-color: tan;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 1em;
+    margin: 0;
+}
+
+#float img {
+    margin-right: 0;
+}
+
+#float li {
+    padding: 8px;
+    margin: 0;
+}
+
+#float h4 {
+    display: none;
+}

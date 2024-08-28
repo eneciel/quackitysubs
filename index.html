@@ -1,65 +1,724 @@
 <html>
     <head>
         <link href="css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/mobile.css" rel="stylesheet" media="(orientation: portrait)">
     </head>
     <body class="desktop">
+        <script>
+            const langResource = {
+                en : {
+                    about_h1_01: "Hello, we are ",
+                    about_h1_02: "Quackity Subs!",
+                    about_h1_03: "",
+                    about_h2_01: "We translate",
+                    about_p_01_1: "Quackity content, live translate his streams (from English to Spanish or Spanish to English), and post summaries in ",
+                    about_p_01_span: "Spanish, English, Korean, Portuguese, and French.",
+                    about_p_01_2: "",
+                    about_h2_02: "Please keep in mind",
+                    about_p_02_1: "We are 7 admins, but ",
+                    about_p_02_span: "only 4 are in charge of live translating",
+                    about_p_02_2: ", so we might not always be able to live translate.",
+                    about_h2_03: "We are NOT an official account",
+                    about_p_03_span: "We are not directly affiliated with Quackity Studios.",
+                    about_p_03_1: " One of the admins is part of the official translation team, but this is a separate thing.",
+
+                    admins_h1: "Meet the admins",
+                    admins_h2: "Hover over to see more!",
+                    sol_country_p: "Country",
+                    sol_country_h401: "Argentina",
+                    sol_country_h402: "Spain",
+                    sol_age_p: "Age",
+                    sol_age_h401: "22",
+                    sol_age_p02: "5th Sep. 2001",
+                    sol_pronoun_p: "Pronouns",
+                    sol_pronoun_h401: "Any",
+                    sol_lang_p: "Languages",
+                    sol_lang_h401: "Spanish",
+                    sol_lang_h402: "English",
+                    sol_lang_p03: "French",
+                    sol_lang_p04: "Portuguese",
+                    sol_lang_p05: "Korean",
+                    isa_country_p: "Country",
+                    isa_country_h401: "Colombia",
+                    isa_age_p: "Age",
+                    isa_age_h401: "20",
+                    isa_age_p02: "30th Apr. 2003",
+                    isa_pronoun_p: "Pronouns",
+                    isa_pronoun_h401: "She/Her",
+                    isa_lang_p: "Languages",
+                    isa_lang_h401: "Spanish",
+                    isa_lang_h402: "English",
+                    isa_lang_p03: "French",
+                    en_country_p: "Country",
+                    en_country_h401: "Korea",
+                    en_age_p: "Age",
+                    en_age_h401: "18",
+                    en_age_p02: "23rd Aug. 2006",
+                    en_pronoun_p: "Pronouns",
+                    en_pronoun_h401: "Any",
+                    en_pronoun_p02: "They/Them",
+                    en_lang_p: "Languages",
+                    en_lang_h401: "Korean",
+                    en_lang_h402: "English",
+                    en_lang_p03: "Spanish",
+                    en_lang_p04: "Portuguese",
+                    en_lang_p05: "Japanese",
+                    dev_country_p: "Country",
+                    dev_country_h401: "Mexico",
+                    dev_age_p: "Age",
+                    dev_age_h401: "23",
+                    dev_age_p02: "13th Jul. 2001",
+                    dev_pronoun_p: "Pronouns",
+                    dev_pronoun_h401: "She/Her",
+                    dev_lang_p: "Languages",
+                    dev_lang_h401: "Spanish",
+                    dev_lang_h402: "English",
+                    dev_lang_p03: "Portuguese",
+                    tessa_country_p: "Country",
+                    tessa_country_h401: "Brazil",
+                    tessa_age_p: "Age",
+                    tessa_age_h401: "24",
+                    tessa_age_p02: "15th Jun. 2000",
+                    tessa_pronoun_p: "Pronouns",
+                    tessa_pronoun_h401: "She/Her",
+                    tessa_lang_p: "Languages",
+                    tessa_lang_h401: "Portuguese",
+                    tessa_lang_h402: "English",
+                    tessa_lang_p03: "Spanish",
+                    mj_country_p: "Country",
+                    mj_country_h401: "France",
+                    mj_age_p: "Age",
+                    mj_age_h401: "22",
+                    mj_age_p02: "25th Aug. 2002",
+                    mj_pronoun_p: "Pronouns",
+                    mj_pronoun_h401: "They/Them",
+                    mj_lang_p: "Languages",
+                    mj_lang_h401: "French",
+                    mj_lang_h402: "English",
+                    monie_country_p: "Country",
+                    monie_country_h401: "Portugal",
+                    monie_age_p: "Age",
+                    monie_age_h401: "18",
+                    monie_age_p02: "20th Jul. 2006",
+                    monie_pronoun_p: "Pronouns",
+                    monie_pronoun_h401: "She/Her",
+                    monie_lang_p: "Languages",
+                    monie_lang_h401: "Portuguese",
+                    monie_lang_h402: "English",
+                    monie_lang_p03: "Spanish",
+
+                    timezone_h1: "Timezones",
+                    timezone_h2: "We are together all around the world!",
+                    timezone_dst: "-> Daylight saving time",
+
+                    faq_h1: "FAQ",
+                    faq_01q_h2: "Q1.",
+                    faq_01q_p: "Are you looking for new admins?",
+                    faq_01a_h2: "A1.",
+                    faq_01a_p01: "Not actively, but we do have ",
+                    faq_01a_span: "an admin form open",
+                    faq_01a_p02: "! We check it every week to see if someone who might be a good fit applied.",
+                    faq_01a_p03: "We're mostly interested (but not limited to): admins up to live translate (English-Spanish), German-speaking admins.",
+                    faq_apply1: "APPLY",
+                    faq_apply2: "APPLY",
+                    faq_apply2p: "for live translator",
+                    faq_02q_h2: "Q2.",
+                    faq_02q_p: "Can you translate [this] video/clip/VOD/etc?",
+                    faq_02a_h2: "A2.",
+                    faq_02a_p01: "You can always send a ",
+                    faq_02a_span1: "DM",
+                    faq_02a_p02: " or a ",
+                    faq_02a_span2: "CuriousCat",
+                    faq_02a_p03: " asking for a translation. We will gladly translate any clip or short video you need. You can even ask us to translate a specific space!",
+                    faq_02a_p04: "However, keep in mind VODs are very long, but if people are interested in a certain VOD, we could try and work on it!",
+                    faq_03q_h2: "Also+",
+                    faq_03q_p01: "Don't hesitate to reply to our tweets, send us a DM, or send us a CuriousCat if you ever have any questions regarding a translation!",
+                    faq_03q_p02: "Due to trying to post a live translation as soon as possible or due to lack of space (in videos' subtitles), sometimes we might skip some kind of information or there might be a cultural barrier making it difficult to understand something. We'll gladly explain anything you need to, we are always happy to help!"
+                },
+
+                es : {
+                    about_h1_01: "¡Hola! Somos",
+                    about_h1_02: "Quackity Subs.",
+                    about_h1_03: "",
+                    about_h2_01: "Traducimos",
+                    about_p_01_1: "contenido sobre Quackity, traducimos en vivo sus directos (de español a inglés y de inglés a español) y publicamos resúmenes de estos en ",
+                    about_p_01_span: "español, inglés, coreano, portugués, y francés.",
+                    about_p_01_2: "",
+                    about_h2_02: "Por favor, tengan en cuenta",
+                    about_p_02_1: "Somos 7 admins, pero ",
+                    about_p_02_span: "solo 4 estams a cargo de traducir en vivo",
+                    about_p_02_2: ", así que habrá veces que no podamos hacerlo.",
+                    about_h2_03: "NO somos una cuenta oficial",
+                    about_p_03_span: "No estamos afiliados directamente com Quackity Studios.",
+                    about_p_03_1: " Uno de los admins forma parte del equipo de traducción oficial, pero esto es aparte.",
+
+                    admins_h1: "Conoce a los admins",
+                    admins_h2: "Pasa el cursor para ver más!",
+                    sol_country_p: "País",
+                    sol_country_h401: "Argentina",
+                    sol_country_h402: "España",
+                    sol_age_p: "Edad",
+                    sol_age_h401: "22",
+                    sol_age_p02: "5-sep-2001",
+                    sol_pronoun_p: "Pronombres",
+                    sol_pronoun_h401: "cualquier",
+                    sol_lang_p: "Idiomas",
+                    sol_lang_h401: "Español",
+                    sol_lang_h402: "Inglés",
+                    sol_lang_p03: "Francés",
+                    sol_lang_p04: "Portugués",
+                    sol_lang_p05: "Coreano",
+                    isa_country_p: "País",
+                    isa_country_h401: "Colombia",
+                    isa_age_p: "Edad",
+                    isa_age_h401: "20",
+                    isa_age_p02: "30-abr-2003",
+                    isa_pronoun_p: "Pronombres",
+                    isa_pronoun_h401: "Ella/-a",
+                    isa_lang_p: "Idiomas",
+                    isa_lang_h401: "Español",
+                    isa_lang_h402: "Inglés",
+                    isa_lang_p03: "Francés",
+                    en_country_p: "País",
+                    en_country_h401: "Corea",
+                    en_age_p: "Edad",
+                    en_age_h401: "18",
+                    en_age_p02: "23-ago-2006",
+                    en_pronoun_p: "Pronombres",
+                    en_pronoun_h401: "cualquier",
+                    en_pronoun_p02: "Elle/-e",
+                    en_lang_p: "Idiomas",
+                    en_lang_h401: "Coreano",
+                    en_lang_h402: "Inglés",
+                    en_lang_p03: "Español",
+                    en_lang_p04: "Portugués",
+                    en_lang_p05: "Japonés",
+                    dev_country_p: "País",
+                    dev_country_h401: "México",
+                    dev_age_p: "Edad",
+                    dev_age_h401: "23",
+                    dev_age_p02: "13-jul-2001",
+                    dev_pronoun_p: "Pronombres",
+                    dev_pronoun_h401: "Ella/-a",
+                    dev_lang_p: "Idiomas",
+                    dev_lang_h401: "Español",
+                    dev_lang_h402: "Inglés",
+                    dev_lang_p03: "Portugués",
+                    tessa_country_p: "País",
+                    tessa_country_h401: "Brasil",
+                    tessa_age_p: "Edad",
+                    tessa_age_h401: "24",
+                    tessa_age_p02: "15-jun-2000",
+                    tessa_pronoun_p: "Pronombres",
+                    tessa_pronoun_h401: "Ella/-a",
+                    tessa_lang_p: "Idiomas",
+                    tessa_lang_h401: "Portugués",
+                    tessa_lang_h402: "Inglés",
+                    tessa_lang_p03: "Español",
+                    mj_country_p: "País",
+                    mj_country_h401: "Francia",
+                    mj_age_p: "Edad",
+                    mj_age_h401: "22",
+                    mj_age_p02: "25-ago-2002",
+                    mj_pronoun_p: "Pronombres",
+                    mj_pronoun_h401: "Elle/-e",
+                    mj_lang_p: "Idiomas",
+                    mj_lang_h401: "Francés",
+                    mj_lang_h402: "Inglés",
+                    monie_country_p: "País",
+                    monie_country_h401: "Portugal",
+                    monie_age_p: "Edad",
+                    monie_age_h401: "18",
+                    monie_age_p02: "20-jul-2006",
+                    monie_pronoun_p: "Pronombres",
+                    monie_pronoun_h401: "Ella/-a",
+                    monie_lang_p: "Idiomas",
+                    monie_lang_h401: "Portugués",
+                    monie_lang_h402: "Inglés",
+                    monie_lang_p03: "Español",
+
+                    timezone_h1: "Zonas Horarias",
+                    timezone_h2: "¡Estamos juntos en todo el mundo!",
+                    timezone_dst: "-> Horario de verano",
+
+                    faq_h1: "FAQ",
+                    faq_01q_h2: "Q1.",
+                    faq_01q_p: "¿Buscan nuevos admins?",
+                    faq_01a_h2: "A1.",
+                    faq_01a_p01: "No activamente, pero sí que tenemos ",
+                    faq_01a_span: "un form de admins abierto",
+                    faq_01a_p02: " por si quieren mandar su formulario. Lo chequeamos cada semana para ver si mandó alguien que se ajuste al equipo.",
+                    faq_01a_p03: "Nos interesan los siguientes perfiles (pero no limitado a esto): admins disponsibles para traducir en vivo (inglés-español), admins que hablen alemán.",
+                    faq_apply1: "APLICAR",
+                    faq_apply2: "APLICAR",
+                    faq_apply2p: "para traductor en vivo",
+                    faq_02q_h2: "Q2.",
+                    faq_02q_p: "Pueden traducir [este] video/clip/VOD/etc?",
+                    faq_02a_h2: "A2.",
+                    faq_02a_p01: "Siempre pueden mandar un ",
+                    faq_02a_span1: "DM",
+                    faq_02a_p02: " o un ",
+                    faq_02a_span2: "CuriousCat",
+                    faq_02a_p03: " pidiéndonos una traducción. Traduciremos cualquier clip o video corto sin problema e incluso nos pueden pedir spaces específicos.",
+                    faq_02a_p04: "Sin embrago, tengan en cuenta que los VODs so muy largos, pero si hay gente interesada en cierto VOD, siempre podemos intentar traducirlo.",
+                    faq_03q_h2: "Extra+",
+                    faq_03q_p01: "¡No duden en responder a nuestros tweets, mandar un DM o mandar un CuriosCat si tienen alguna duda acerca de una traducción!",
+                    faq_03q_p02: "Ya que siempre intentamos traducir lo más rápido posible o, en el caso de los subtítulos en los videos, no hay suficiente espacio, a veces nos saltamos algún tipo de información o hay alguna barrera cultura que hace que sea difícil entender ciertas cosas. ¡No tenemos ningún problema en explicarles lo que podamos, estamos aquí para ayudar!"
+                },
+
+                ptbr : {
+                    about_h1_01: "Óla, somos",
+                    about_h1_02: "Quackity Subs!",
+                    about_h1_03: "",
+                    about_h2_01: "Traduzimos",
+                    about_p_01_1: "conteúdo sobre o Quackity, traduzimos as lives dele (do espanhol para o inglês e do inglês a espanhol) e publicamos resumos delas em ",
+                    about_p_01_span: "espanhol, inglês, coreano, português, e francês.",
+                    about_p_01_2: "",
+                    about_h2_02: "Tenha em mente",
+                    about_p_02_1: "que somos 7 adminstradores, mas ",
+                    about_p_02_span: "apenas 4 de nós são responsáveis pela tradução ao vivo",
+                    about_p_02_2: ", então haverá momentos em que não poderemos fazê-lo.",
+                    about_h2_03: "NÃO somos uma conta oficial",
+                    about_p_03_span: "NÃO somos diretamente afiliada ao Quackity Studios.",
+                    about_p_03_1: " Um dos administradores faz parte da equipe oficial de tradução, mas é separado.",
+
+                    admins_h1: "Conheça os personagens",
+                    admins_h2: "Passe o mouse para ver mais",
+                    sol_country_p: "País",
+                    sol_country_h401: "Argentina",
+                    sol_country_h402: "Espanha",
+                    sol_age_p: "Idade",
+                    sol_age_h401: "22",
+                    sol_age_p02: "5/9/2001",
+                    sol_pronoun_p: "Pronomes",
+                    sol_pronoun_h401: "qualquer",
+                    sol_lang_p: "Idiomas",
+                    sol_lang_h401: "Espanhol",
+                    sol_lang_h402: "Inglês",
+                    sol_lang_p03: "Francês",
+                    sol_lang_p04: "Português",
+                    sol_lang_p05: "Coreano",
+                    isa_country_p: "País",
+                    isa_country_h401: "Colômbia",
+                    isa_age_p: "Idade",
+                    isa_age_h401: "20",
+                    isa_age_p02: "30/4/2003",
+                    isa_pronoun_p: "Pronomes",
+                    isa_pronoun_h401: "Ela/Dela",
+                    isa_lang_p: "Idiomas",
+                    isa_lang_h401: "Espanhol",
+                    isa_lang_h402: "Inglês",
+                    isa_lang_p03: "Francês",
+                    en_country_p: "País",
+                    en_country_h401: "Coréia",
+                    en_age_p: "Idade",
+                    en_age_h401: "18",
+                    en_age_p02: "23/8/2006",
+                    en_pronoun_p: "Pronomes",
+                    en_pronoun_h401: "qualquer",
+                    en_pronoun_p02: "Elu/Delu",
+                    en_lang_p: "Idiomas",
+                    en_lang_h401: "Coreano",
+                    en_lang_h402: "Inglês",
+                    en_lang_p03: "Espanhol",
+                    en_lang_p04: "Português",
+                    en_lang_p05: "Japonês",
+                    dev_country_p: "País",
+                    dev_country_h401: "México",
+                    dev_age_p: "Idade",
+                    dev_age_h401: "23",
+                    dev_age_p02: "13/7/2001",
+                    dev_pronoun_p: "Pronomes",
+                    dev_pronoun_h401: "Ela/Dela",
+                    dev_lang_p: "Idiomas",
+                    dev_lang_h401: "Espanhol",
+                    dev_lang_h402: "Inglês",
+                    dev_lang_p03: "Português",
+                    tessa_country_p: "País",
+                    tessa_country_h401: "Brasil",
+                    tessa_age_p: "Idade",
+                    tessa_age_h401: "24",
+                    tessa_age_p02: "15/6/2000",
+                    tessa_pronoun_p: "Pronomes",
+                    tessa_pronoun_h401: "Ela/Dela",
+                    tessa_lang_p: "Idiomas",
+                    tessa_lang_h401: "Português",
+                    tessa_lang_h402: "Inglês",
+                    tessa_lang_p03: "Espanhol",
+                    mj_country_p: "País",
+                    mj_country_h401: "França",
+                    mj_age_p: "Idade",
+                    mj_age_h401: "22",
+                    mj_age_p02: "25/8/2002",
+                    mj_pronoun_p: "Pronomes",
+                    mj_pronoun_h401: "Elu/Delu",
+                    mj_lang_p: "Idiomas",
+                    mj_lang_h401: "Francês",
+                    mj_lang_h402: "Inglês",
+                    monie_country_p: "País",
+                    monie_country_h401: "Portugal",
+                    monie_age_p: "Idade",
+                    monie_age_h401: "18",
+                    monie_age_p02: "20/7/2006",
+                    monie_pronoun_p: "Pronomes",
+                    monie_pronoun_h401: "Ela/Dela",
+                    monie_lang_p: "Idiomas",
+                    monie_lang_h401: "Português",
+                    monie_lang_h402: "Inglês",
+                    monie_lang_p03: "Espanhol",
+
+                    timezone_h1: "Fuso Horários",
+                    timezone_h2: "Estamos juntos ao redor do mundo!",
+                    timezone_dst: "-> Horário de verão",
+
+                    faq_h1: "FAQ",
+                    faq_01q_h2: "Q1.",
+                    faq_01q_p: "Você está procurando novos administradores?",
+                    faq_01a_h2: "A1.",
+                    faq_01a_p01: "Não ativamente, mas temos ",
+                    faq_01a_span: "um formulário de administração aberto",
+                    faq_01a_p02: "caso alguém queira enviar o formulário. Nós o verificamos toda semana para checar se alguém que se encaixe no time enviou.",
+                    faq_01a_p03: "Estamos interessados nos seguintes perfis (mas não limitados a estes): administradores disponíveis para traduzir ao vivo (inglês-espanhol), administradores que falam alemão.",
+                    faq_apply1: "APLICAR",
+                    faq_apply2: "",
+                    faq_apply2p: "",
+                    faq_02q_h2: "Q2.",
+                    faq_02q_p: "Você pode traduzir [este] vídeo/clip/VOD/etc?",
+                    faq_02a_h2: "A2.",
+                    faq_02a_p01: "Você sempre pode enviar um ",
+                    faq_02a_span1: "DM",
+                    faq_02a_p02: " ou um ",
+                    faq_02a_span2: "CuriousCat",
+                    faq_02a_p03: " solicitando uma tradução. Traduziremos qualquer clipe ou vídeo curto sem problemas e pode até nos solicitar spaces específicos.",
+                    faq_02a_p04: "Porém, lembre-se que os VODs são muito longos, mas se houver pessoas interessadas em determinado VOD, podemos sempre tentar traduzi-lo.",
+                    faq_03q_h2: "Extra+",
+                    faq_03q_p01: "Sinta-se à vontade para responder aos nossos tweets, enviar um DM ou um CuriousCat se tiver alguma dúvida sobre uma tradução!",
+                    faq_03q_p02: "Como tentamos sempre traduzir o mais rápido possível ou, no caso de legendas em vídeos, não há espaço suficiente, às vezes pulamos algum tipo de informação ou existe alguma barreira cultural que dificulta a compreensão de certas coisas. Não temos problemas em explicar o que podemos, estamos aqui para ajudar!"
+                },
+                
+                fr : {
+                    about_h1_01: "Bonjour, nous sommes",
+                    about_h1_02: "Quackity Subs!",
+                    about_h1_03: "",
+                    about_h2_01: "Nous traduisons",
+                    about_p_01_1: "le contenu de Quackity, traduisons ses streams en direct (de l'anglais à l'espagnol ou de l'espagnol à l'anglais), et nous postons des résumés en ",
+                    about_p_01_span: "Espagnol, Anglais, Coréen, Portugais, Français.",
+                    about_p_01_2: "",
+                    about_h2_02: "Gardez en tête que",
+                    about_p_02_1: "Nous sommes 7 admins, mais ",
+                    about_p_02_span: "seulement 4 dirigent les traductions en direct",
+                    about_p_02_2: ", seulement 4 dirigent les traductions en direct",
+                    about_h2_03: "Nous ne sommes PAS un compte officiel",
+                    about_p_03_span: "Nous ne sommes pas directement affiliés à Quackity Studios.",
+                    about_p_03_1: "L'un de nos admins fait partie de l'équipe de traduction officielle, mais c'est une chose séparée.",
+
+                    admins_h1: "Rencontrer les admins",
+                    admins_h2: "Passe ta souris pour en voir plus !",
+                    sol_country_p: "Pays",
+                    sol_country_h401: "Argentine",
+                    sol_country_h402: "Espange",
+                    sol_age_p: "Age",
+                    sol_age_h401: "22",
+                    sol_age_p02: "5 sept. 2001",
+                    sol_pronoun_p: "Pronoms",
+                    sol_pronoun_h401: "Any",
+                    sol_lang_p: "Langue",
+                    sol_lang_h401: "Espagnol",
+                    sol_lang_h402: "Anglais",
+                    sol_lang_p03: "Français",
+                    sol_lang_p04: "Portugais",
+                    sol_lang_p05: "Coréen",
+                    isa_country_p: "Pays",
+                    isa_country_h401: "Colombie",
+                    isa_age_p: "Age",
+                    isa_age_h401: "20",
+                    isa_age_p02: "30 avr. 2003",
+                    isa_pronoun_p: "Pronoms",
+                    isa_pronoun_h401: "She/Her",
+                    isa_lang_p: "Langue",
+                    isa_lang_h401: "Espagnol",
+                    isa_lang_h402: "Anglais",
+                    isa_lang_p03: "Français",
+                    en_country_p: "Pays",
+                    en_country_h401: "Corée",
+                    en_age_p: "Age",
+                    en_age_h401: "18",
+                    en_age_p02: "23 août. 2006",
+                    en_pronoun_p: "Pronoms",
+                    en_pronoun_h401: "Any",
+                    en_pronoun_p02: "il/iel",
+                    en_lang_p: "Langue",
+                    en_lang_h401: "Coréen",
+                    en_lang_h402: "Anglais",
+                    en_lang_p03: "Espagnol",
+                    en_lang_p04: "Portugais",
+                    en_lang_p05: "Japonais",
+                    dev_country_p: "Pays",
+                    dev_country_h401: "Mexique",
+                    dev_age_p: "Age",
+                    dev_age_h401: "23",
+                    dev_age_p02: "13 juil. 2001",
+                    dev_pronoun_p: "Pronoms",
+                    dev_pronoun_h401: "She/Her",
+                    dev_lang_p: "Langue",
+                    dev_lang_h401: "Espagnol",
+                    dev_lang_h402: "Anglais",
+                    dev_lang_p03: "Portugais",
+                    tessa_country_p: "Pays",
+                    tessa_country_h401: "Brésil",
+                    tessa_age_p: "Age",
+                    tessa_age_h401: "24",
+                    tessa_age_p02: "15 juin. 2000",
+                    tessa_pronoun_p: "Pronoms",
+                    tessa_pronoun_h401: "She/Her",
+                    tessa_lang_p: "Langue",
+                    tessa_lang_h401: "Portugais",
+                    tessa_lang_h402: "Anglais",
+                    tessa_lang_p03: "Espagnol",
+                    mj_country_p: "Pays",
+                    mj_country_h401: "France",
+                    mj_age_p: "Age",
+                    mj_age_h401: "22",
+                    mj_age_p02: "25 aoút. 2002",
+                    mj_pronoun_p: "Pronoms",
+                    mj_pronoun_h401: "il/iel",
+                    mj_lang_p: "Langue",
+                    mj_lang_h401: "Français",
+                    mj_lang_h402: "Anglais",
+                    monie_country_p: "Pays",
+                    monie_country_h401: "Portugal",
+                    monie_age_p: "Age",
+                    monie_age_h401: "18",
+                    monie_age_p02: "20 juil. 2006",
+                    monie_pronoun_p: "Pronoms",
+                    monie_pronoun_h401: "She/Her",
+                    monie_lang_p: "Langue",
+                    monie_lang_h401: "Portugais",
+                    monie_lang_h402: "Anglais",
+                    monie_lang_p03: "Espagnol",
+
+                    timezone_h1: "Fuseaux horaires",
+                    timezone_h2: "Nous sommes ensemble partout dans le monde !",
+                    timezone_dst: "-> Heure d'été",
+
+                    faq_h1: "FAQ",
+                    faq_01q_h2: "Q1.",
+                    faq_01q_p: "Cherchez-vous de nouveaux admins ?",
+                    faq_01a_h2: "R1.",
+                    faq_01a_p01: "Pas activement, mais nous avons ",
+                    faq_01a_span: "un formulaire ouvert !",
+                    faq_01a_p02: "Nous le vérifions chaque semaine, pour voir si quelqu'un pourrait nous correspondre.",
+                    faq_01a_p03: "Nous sommes principalement intéressés par (mais pas fermés à) : admins qui peuvent traduire en direct (anglais-espagnol), admins allemands.",
+                    faq_apply1: "ENVOYÉ",
+                    faq_apply2: "",
+                    faq_apply2p: "",
+                    faq_02q_h2: "Q2.",
+                    faq_02q_p: "Pouvez-vous traduire [ca] vidéo/clip/VOD/etc ?",
+                    faq_02a_h2: "R2.",
+                    faq_02a_p01: "Vous pouvez toujours envoyer un ",
+                    faq_02a_span1: "message",
+                    faq_02a_p02: " ou un ",
+                    faq_02a_span2: "CuriousCat",
+                    faq_02a_p03: "pour demander une traduction. Nous serons ravis de traduire tout clip ou courte vidéo dont vous avez besoin. Vous pouvez même nous demander de traduire dans un espace spécifique !",
+                    faq_02a_p04: "Gardez en tête que les VODs sont très longues, mais si des personnes sont intéressées par une certaine VOD, nous pourrions essayer de travailler dessus !",
+                    faq_03q_h2: "Aussi+",
+                    faq_03q_p01: "N’hésitez pas à répondre à nos tweets, à nous envoyer un message, ou à nous envoyer un CuriousCat si vous avez des questions concernant une traduction !",
+                    faq_03q_p02: "A cause du fait que nous essayons de traduire en direct aussi rapidement que possible, ou par manque de place (dans les sous-titres des vidéos), il se peut que nous sautions des informations ou dues à la différence culturelle qui rendrait les choses difficiles à comprendre. Nous serons ravis d’expliquer tout ce dont vous avez besoin, nous sommes toujours prêts à vous aider !"
+                },
+
+                ko : {
+                    about_h1_01: "안녕하세요, ",
+                    about_h1_02: "Quackity Subs",
+                    about_h1_03: "입니다!",
+                    about_h2_01: "번역을 제공합니다",
+                    about_p_01_1: "저희는 콰키티의 콘텐츠를 번역하고, 타래로 스트림 실시간 번역(영어에서 스페인어로 또는 스페인어에서 영어로)을 하며, ",
+                    about_p_01_span: "스페인어, 영어, 한국어, 포르투갈어, 프랑스어",
+                    about_p_01_2: "로 방송 요약을 게시하고 있습니다.",
+                    about_h2_02: "참고해주세요",
+                    about_p_02_1: "저희 팀은 7명이지만 ",
+                    about_p_02_span: "4명만 실시간 번역을 담당하고 있어",
+                    about_p_02_2: " 항상 실시간 번역을 할 수는 없을 수도 있습니다.",
+                    about_h2_03: "공식 계정이 아닙니다",
+                    about_p_03_span: "저희는 Quackity Studios와 직접 제휴한 공식 계정이 아닙니다.",
+                    about_p_03_1: "저희 중 한 명은 공식 번역팀에 속해 있지만, 이는 별개의 일입니다.",
+
+                    admins_h1: "어드민을 소개합니다",
+                    admins_h2: "마우스 올려 더보기",
+                    sol_country_p: "국가",
+                    sol_country_h401: "아르헨티나",
+                    sol_country_h402: "스페인",
+                    sol_age_p: "나이",
+                    sol_age_h401: "22",
+                    sol_age_p02: "2001.09.05",
+                    sol_pronoun_p: "대명사",
+                    sol_pronoun_h401: "자유",
+                    sol_lang_p: "언어",
+                    sol_lang_h401: "스페인어",
+                    sol_lang_h402: "영어",
+                    sol_lang_p03: "프랑스어",
+                    sol_lang_p04: "포르투갈어",
+                    sol_lang_p05: "한국어",
+                    isa_country_p: "국가",
+                    isa_country_h401: "콜롬비아",
+                    isa_age_p: "나이",
+                    isa_age_h401: "20",
+                    isa_age_p02: "2003.04.30",
+                    isa_pronoun_p: "대명사",
+                    isa_pronoun_h401: "She/Her|Ella/-a",
+                    isa_lang_p: "언어",
+                    isa_lang_h401: "스페인어",
+                    isa_lang_h402: "영어",
+                    isa_lang_p03: "프랑스어",
+                    en_country_p: "국가",
+                    en_country_h401: "대한민국",
+                    en_age_p: "나이",
+                    en_age_h401: "18",
+                    en_age_p02: "2006.08.23",
+                    en_pronoun_p: "대명사",
+                    en_pronoun_h401: "자유",
+                    en_pronoun_p02: "They/Them",
+                    en_lang_p: "언어",
+                    en_lang_h401: "한국어",
+                    en_lang_h402: "영어",
+                    en_lang_p03: "스페인어",
+                    en_lang_p04: "포르투갈어",
+                    en_lang_p05: "일본어",
+                    dev_country_p: "국가",
+                    dev_country_h401: "멕시코",
+                    dev_age_p: "나이",
+                    dev_age_h401: "23",
+                    dev_age_p02: "2001.07.13",
+                    dev_pronoun_p: "대명사",
+                    dev_pronoun_h401: "She/Her|Ella/-a",
+                    dev_lang_p: "언어",
+                    dev_lang_h401: "스페인어",
+                    dev_lang_h402: "영어",
+                    dev_lang_p03: "포르투갈어",
+                    tessa_country_p: "국가",
+                    tessa_country_h401: "브라질",
+                    tessa_age_p: "나이",
+                    tessa_age_h401: "24",
+                    tessa_age_p02: "2000.06.15",
+                    tessa_pronoun_p: "대명사",
+                    tessa_pronoun_h401: "She/Her|Ela/Dela",
+                    tessa_lang_p: "언어",
+                    tessa_lang_h401: "포르투갈어",
+                    tessa_lang_h402: "영어",
+                    tessa_lang_p03: "스페인어",
+                    mj_country_p: "국가",
+                    mj_country_h401: "프랑스",
+                    mj_age_p: "나이",
+                    mj_age_h401: "22",
+                    mj_age_p02: "2002.08.25",
+                    mj_pronoun_p: "대명사",
+                    mj_pronoun_h401: "They/Them|il/iel",
+                    mj_lang_p: "언어",
+                    mj_lang_h401: "프랑스어",
+                    mj_lang_h402: "영어",
+                    monie_country_p: "국가",
+                    monie_country_h401: "포르투갈",
+                    monie_age_p: "나이",
+                    monie_age_h401: "18",
+                    monie_age_p02: "2006.07.20",
+                    monie_pronoun_p: "대명사",
+                    monie_pronoun_h401: "She/Her|Ela/Dela",
+                    monie_lang_p: "언어",
+                    monie_lang_h401: "포르투갈어",
+                    monie_lang_h402: "영어",
+                    monie_lang_p03: "스페인어",
+
+                    timezone_h1: "시간대",
+                    timezone_h2: "전 세계에서 함께합니다",
+                    timezone_dst: "-> 현재 일광 시간 절약제 사용 중",
+
+                    faq_h1: "FAQ",
+                    faq_01q_h2: "Q1.",
+                    faq_01q_p: "새 어드민을 모집하고 있나요?",
+                    faq_01a_h2: "A1.",
+                    faq_01a_p01: "적극적으로 구하고 있지는 않습니다만 ",
+                    faq_01a_span: "지원 양식은 열려있습니다!",
+                    faq_01a_p02: "매주 확인하여 적절한 사람이 지원하셨는지 지켜보고 있습니다.",
+                    faq_01a_p03: "주 모집 분야(한정 X): 실시간 번역 가능 어드민(영어-스페인어), 독일어 사용 어드민",
+                    faq_apply1: "지원하기",
+                    faq_apply2: "",
+                    faq_apply2p: "",
+                    faq_02q_h2: "Q2.",
+                    faq_02q_p: "특정 클립/영상 등에 대한 번역 요청도 받으시나요?",
+                    faq_02a_h2: "A2.",
+                    faq_02a_p01: "언제든 저희에게 ",
+                    faq_02a_span1: "DM",
+                    faq_02a_p02: " 혹은 ",
+                    faq_02a_span2: "익명 질문함",
+                    faq_02a_p03: "으로 보내주세요. 가벼운 영상이라면 흔쾌히 작업해 드리겠습니다. 스페이스 요청도 하셔도 됩니다!",
+                    faq_02a_p04: "다만 다시보기 영상은 상당히 길다는 점을 기억해주세요. 여러 사람들이 특정 다시보기에 관심을 보내주신다면 최선을 다해보겠습니다!",
+                    faq_03q_h2: "기타+",
+                    faq_03q_p01: "번역 요청을 포함해 질문이 있으시다면 언제든 저희가 올린 트윗에 편하게 멘션 달아주시거나, 디엠 혹은 익명 질문함으로 보내주세요!",
+                    faq_03q_p02: "간혹 실시간으로 최대한 빨리 번역하기 위해, 혹은 영상에 공간이 부족한 탓에 몇가지 정보가 누락되거나, 문화 차이로 인해 이해하기 어려운 것들이 있을 수 있습니다. 저희는 도움을 드리는 일을 즐거워하는 사람들이니, 필요하시다면 기꺼히 설명해 드리겠습니다!"
+                },
+            }
+        </script>
+
         <main>
             <div id="langs">
-                <ul>
-                    <a href="index.html"><li>English</li></a>
-                    <a href="web/spanish.html"><li>Español</li></a>
-                    <a href="web/portuguese.html"><li>Português</li></a>
-                    <a href="web/french.html"><li>Français</li></a>
-                    <a href="web/korean.html"><li>한국어</li></a>
-                </ul>
+                <label for="languageSelector"><img src="source/language.svg"></label>
+                <select id="languageSelector">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="ptbr">Português</option>
+                    <option value="fr">Français</option>
+                    <option value="ko">한국어</option>
+                </select>
             </div>
             <div id="about">
                 <img src="source/logo.png">
-                <h1>Hello, we are <span>Quackity Subs</span>!</h1>
-                <div>
-                    <h2>We translate</h2>
-                    <p>Quackity content, live translate his streams (from English to Spanish or Spanish to English), and post summaries in <span>Spanish, English, Korean, Portuguese, and French.</span></p>
-                    <h2>Please keep in mind</h2>
-                    <p>We are 7 admins, but <span>only 4 are in charge of live translating</span>, so we might not always be able to live translate.</p>
-                    <h2>We are NOT an official account</h2>
-                    <p><span>We are not directly affiliated with Quackity Studios.</span> One of the admins is part of the official translation team, but this is a separate thing.</p>
+                <div class="row-h1">
+                    <h1 id="about_h1_01"></h1>
+                    <h1><span id="about_h1_02"></span></h1>
+                    <h1 id="about_h1_03"></h1>
+                </div>
+                <div id="infos">
+                    <h2 id="about_h2_01"></h2>
+                    <div class="row-p"><p id="about_p_01_1"></p> <span id="about_p_01_span"></span></div>
+                    <h2 id="about_h2_02"></h2>
+                    <div class="row-p"><p id="about_p_02_1"></p> <span id="about_p_02_span"></span> <p id="about_p_02_2"></p></div>
+                    <h2 id="about_h2_03"></h2>
+                    <div class="row-p"><span id="about_p_03_span"></span> <p id="about_p_03_1"></p></div>
                 </div>
             </div>
             <div id="admins">
-                <div style="padding-left: 4vw;">
-                    <h1>Meet the admins</h1>
-                    <h2>Hover over to see more!</h2>
-                </div>
+                <h1 id="admins_h1"></h1>
+                <h2 id="admins_h2"></h2>
                 <div class="profilebox">
                     <div class="profile">
                         <div class="profile-header"><img src="source/sol.icon.svg"><h3>Sol</h3></div>
                         <div class="profile-contentsbox">
                             <div class="profile-content">
-                                <p>Country</p>
-                                <div>
-                                    <h4><img src="source/flag/flag-argentina.svg" style="padding: 0 4px;">Argentina</h4>
-                                    <h4><img src="source/flag/flag-spain.svg" style="padding: 0 4px;">Spain</h4>
+                                <p id="sol_country_p"></p>
+                                <div class="column">
+                                    <div class="row-h4"><img src="source/flag/flag-argentina.svg" style="padding: 0 4px;"><h4 id="sol_country_h401"></h4></div>
+                                    <div class="row-h4"><img src="source/flag/flag-spain.svg" style="padding: 0 4px;"><h4 id="sol_country_h402"></h4></div>
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <p>Age</p>
+                                <p id="sol_age_p"></p>
                                 <div>
-                                    <h4>22</h4>
-                                    <p><img src="source/balloon.png" style="width: 1em;">5th Sep. 2001</p>
+                                    <h4 id="sol_age_h401"></h4>
+                                    <i><img src="source/balloon.png" style="width: 1em;"><i id="sol_age_p02"></i></i>
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <p>Pronouns</p>
-                                <h4>Any</h4>
+                                <p id="sol_pronoun_p"></p>
+                                <h4 id="sol_pronoun_h401"></h4>
                             </div>
                             <div class="profile-content">
-                                <p>Languages</p>
+                                <p id="sol_lang_p"></p>
                                 <div>
-                                    <h4>Spanish</h4>
-                                    <h4>English</h4>
-                                    <p style="text-align: end;">French</p>
-                                    <p style="text-align: end;">Portuguese</p>
-                                    <p style="text-align: end;">Korean</p>
+                                    <h4 id="sol_lang_h401"></h4>
+                                    <h4 id="sol_lang_h402"></h4>
+                                    <p id="sol_lang_p03" style="text-align: end;"></p>
+                                    <p id="sol_lang_p04" style="text-align: end;"></p>
+                                    <p id="sol_lang_p05" style="text-align: end;"></p>
                                 </div>
                             </div>
                             <a href="https://twitter.com/soltrads" target="_blank"><div class="profile-content">
@@ -72,26 +731,26 @@
                         <div class="profile-header"><img src="source/isa.icon.svg"><h3>Isa</h3></div>
                         <div class="profile-contentsbox">
                             <div class="profile-content">
-                                <p>Country</p>
-                                <h4><img src="source/flag/flag-colombia.svg" style="padding: 0 4px;">Colombia</h4>
+                                <p id="isa_country_p"></p>
+                                <div class="row-h4"><img src="source/flag/flag-colombia.svg" style="padding: 0 4px;"><h4 id="isa_country_h401"></h4></div>
                             </div>
                             <div class="profile-content">
-                                <p>Age</p>
+                                <p id="isa_age_p"></p>
                                 <div>
-                                    <h4>20</h4>
-                                    <p><img src="source/balloon.png" style="width: 1em;">30th Apr. 2004</p>
+                                    <h4 id="isa_age_h401"></h4>
+                                    <i><img src="source/balloon.png" style="width: 1em;"><i id="isa_age_p02"></i></i>
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <p>Pronouns</p>
-                                <h4>She/Her</h4>
+                                <p id="isa_pronoun_p"></p>
+                                <h4 id="isa_pronoun_h401"></h4>
                             </div>
                             <div class="profile-content">
-                                <p>Languages</p>
+                                <p id="isa_lang_p"></p>
                                 <div>
-                                    <h4>Spanish</h4>
-                                    <h4>English</h4>
-                                    <p style="text-align: end;">French</p>
+                                    <h4 id="isa_lang_h401"></h4>
+                                    <h4 id="isa_lang_h402"></h4>
+                                    <p id="isa_lang_p03" style="text-align: end;"></p>
                                 </div>
                             </div>
                             <a href="https://twitter.com/licsmp" target="_blank"><div class="profile-content">
@@ -104,8 +763,8 @@
                         <div class="profile-header"><img src="source/eneciel.icon.svg"><h3>Eneciel</h3></div>
                         <div class="profile-contentsbox">
                             <div class="profile-content">
-                                <p>Country</p>
-                                <h4><img src="source/flag/flag-south-korea.svg" style="padding: 0 4px;">Korea</h4>
+                                <p id="en_country_p"></p>
+                                <div class="row-h4"><img src="source/flag/flag-south-korea.svg" style="padding: 0 4px;"><h4 id="en_country_h401"></h4></div>
                             </div>
                             <div class="profile-content">
                                 <p>Age</p>
@@ -268,6 +927,8 @@
                     <p>-> Daylight saving time</p>
                     <img src="source/timezonetable.png">
                     <img src="source/timezonetable-summer.png">
+                    <img src="source/timezonetable_mobile.png">
+                    <img src="source/timezonetable_mobile-summer.png">
                 </div>
             </div>
             <div id="faq">
@@ -309,25 +970,67 @@
             <div id="footer">
                 <a href="https://twitter.com/QuackitySubs" target="_blank">Copyright 2024 @QuackitySubs all rights reserved.</a>
             </div>
+            <div id="float">
+                <ul>
+                    <a href="#about"><li><img src="source/intro.svg"><h4>About</h4></li></a>
+                    <a href="#admins"><li><img src="source/admin.svg"><h4>Admins</h4></li></a>
+                    <a href="#timezone"><li><img src="source/time.svg"><h4>Timezones</h4></li></a>
+                    <a href="#faq"><li><img src="source/faq.svg"><h4>FAQ</h4></li></a>
+                    <a href="https://twitter.com/quackitysubs" target="_blank"><li><img src="source/twitter.svg"><h4>Twitter</h4></li></a>
+                    <a href="https://www.youtube.com/@quackitysubs" target="_blank"><li><img src="source/youtube.svg"><h4>Youtube</h4></li></a>
+                </ul>
+            </div>
         </main>
-        <div id="float">
-            <ul>
-                <a href="#about"><li><img src="source/intro.svg"><h4>About</h4></li></a>
-                <a href="#admins"><li><img src="source/admin.svg"><h4>Admins</h4></li></a>
-                <a href="#timezone"><li><img src="source/time.svg"><h4>Timezones</h4></li></a>
-                <a href="#faq"><li><img src="source/faq.svg"><h4>FAQ</h4></li></a>
-                <a href="https://twitter.com/quackitysubs" target="_blank"><li><img src="source/twitter.svg"><h4>Twitter</h4></li></a>
-                <a href="https://www.youtube.com/@quackitysubs" target="_blank"><li><img src="source/youtube.svg"><h4>Youtube</h4></li></a>
-            </ul>
-        </div>
 
         <script>
-            var userAgent = navigator.userAgent.toLowerCase();
-            var mobile = (/iphone|ipad|ipod|android/i.test(userAgent));
+            /* 초기 언어는 한국어(ko)로 설정하고, 변경되면 맞춰서 업데이트 하는 리스너 구현 */
+            window.addEventListener("load", function() {
+                document.getElementById("languageSelector").value = "ko";
+                updateLanguage("ko");
 
-            if (mobile) {
-                window.location.href = "mobile/m.qsubs.html";
+                document.getElementById("languageSelector").addEventListener("change", function() {
+                    const selectedLang = this.value;
+                    updateLanguage(selectedLang);
+                });
+            });
+            
+            /* 딕셔너리 내 모든 key 값을 순회하며 변경하는 함수 */
+            function updateLanguage(lang) {
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang][key];
+                    }
+                }
             }
+            
+            var profile = document.getElementsByClassName("profile");
+
+            function handleClick(event) {
+            console.log(event.target);
+            // console.log(this);
+            // 콘솔창을 보면 둘다 동일한 값이 나온다
+
+            console.log(event.target.classList);
+
+            if (event.target.classList[1] === "clicked") {
+                event.target.classList.remove("clicked");
+            } else {
+                for (var i = 0; i < profile.length; i++) {
+                profile[i].classList.remove("clicked");
+                }
+
+                event.target.classList.add("clicked");
+            }
+            }
+
+            function init() {
+            for (var i = 0; i < profile.length; i++) {
+                profile[i].addEventListener("click", handleClick);
+            }
+            }
+
+            init();
         </script>
     </body>
 </html>
