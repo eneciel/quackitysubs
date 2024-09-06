@@ -114,12 +114,12 @@ label img {
     padding: 4px 0;
 }
 
-.clicked:nth-child(1) {
+/* .clicked:nth-child(1) {
     background: url(../source/admin/sol.bg.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+} */
 
 /* TIMEZONE */
 

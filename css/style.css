@@ -300,12 +300,12 @@ label img {
     background-position: center;
 }
 
-.profile:nth-child(1):hover {
+/* .profile:nth-child(1):hover {
     background: url(../source/admin/sol.bg.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+} */
 
 /* .profile:nth-child(6):hover {
     background: url(../source/moon.bg.gif);
