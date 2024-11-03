@@ -346,14 +346,14 @@ label img {
 /* DST */
 
 .timezonebox p {
-    display: block;
+    display: none;
 }
 
 .timezonebox img {
     display: none;
 }
 
-.timezonebox img:nth-child(3) {
+.timezonebox img:nth-child(2) {
     display: block;
 }
 
