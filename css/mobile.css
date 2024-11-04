@@ -141,7 +141,7 @@ label img {
     display: none;
 }
 
-.timezonebox img:nth-child(5) {
+.timezonebox img:nth-child(4) {
     display: block;
 }
 
